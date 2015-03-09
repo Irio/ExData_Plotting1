@@ -21,7 +21,7 @@ par(mfrow=c(2, 2))
 plot(plot4_data$DateTime, plot4_data$Global_active_power, type="l", xlab=NA, ylab="Global Active Power")
 
 # 2
-plot(plot4_data$DateTime, plot4_data$Voltage, type="l", xlab=NA, ylab="Voltage")
+plot(plot4_data$DateTime, plot4_data$Voltage, type="l", xlab="datetime", ylab="Voltage")
 
 # 3
 y_range <- c(min(plot4_data$Sub_metering_1, plot4_data$Sub_metering_2, plot4_data$Sub_metering_3),
@@ -36,6 +36,6 @@ par(new=FALSE)
 legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, col=colors, bty="n")
 
 # 4
-plot(plot4_data$DateTime, plot4_data$Global_reactive_power, type="l", xlab=NA, ylab="Voltage")
+plot(plot4_data$DateTime, plot4_data$Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power")
 
 dev.off()
